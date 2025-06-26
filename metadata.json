@@ -45,3 +45,39 @@
   ],
   "metadataVersion": "1.0"
 }
+# SDKP/QCC NFT Registry: Reference Data
+
+| Data Type            | Value or Reference                                                                 |
+|----------------------|-----------------------------------------------------------------------------------|
+| **Zenodo DOI**       | [10.5281/zenodo.15745609](https://doi.org/10.5281/zenodo.15745609)                |
+| **Contract Address** | 0x3c2D45Cc7c4c943DdA1BfD962289Da2E0F6f33e1                                        |
+| **Sample IPFS CIDs** | QmZ…EntanglementXYZ, QmX…EntropyLog928, QmY…MetadataNFTQCC, QmG…GraphSimulation9   |
+| **Community Link**   | [Vercel Community Discussion](https://community.vercel.com/t/fathertimesdkp-sd-n-qcc-eos-and-np-complete/14014) |
+
+---
+
+## 📦 NFT Metadata Example
+
+```json
+{
+  "name": "SDKP Quantum Simulation #001",
+  "description": "Simulated quantum entanglement using SDKP and QCCEntropy at EOS speed.",
+  "image": "ipfs://QmHashImage",
+  "animation_url": "ipfs://QmHashGraph",
+  "external_url": "https://doi.org/10.5281/zenodo.15745609",
+  "community_url": "https://community.vercel.com/t/fathertimesdkp-sd-n-qcc-eos-and-np-complete/14014",
+  "ipfs_artifacts": [
+    "ipfs://QmZ…EntanglementXYZ",
+    "ipfs://QmX…EntropyLog928",
+    "ipfs://QmY…MetadataNFTQCC",
+    "ipfs://QmG…GraphSimulation9"
+  ],
+  "attributes": [
+    { "trait_type": "Simulation Mode", "value": "EOS" },
+    { "trait_type": "QCC Entropy", "value": 0.8642 },
+    { "trait_type": "Kapnack Optimization", "value": "Pass" },
+    { "trait_type": "Zenodo DOI", "value": "10.5281/zenodo.15745609" },
+    { "trait_type": "Contract Address", "value": "0x3c2D45Cc7c4c943DdA1BfD962289Da2E0F6f33e1" }
+  ]
+}
+```
