@@ -1,0 +1,58 @@
+#!/bin/bash
+# SDKP GitHub Automation Script
+# Author: Donald Paul Smith (FatherTimeSDKP)
+# Date: 2025-10-27
+# Description: Automates the Git add, commit, and push process.
+#
+# --- Robust error handling ---
+set -euo pipefail
+
+# --- 1. Define Variables ---
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+# --- 2. Pre-Check: Verify Git Repository ---
+if [ -z "$REPO_ROOT" ]; then
+    echo "🚨 ERROR: Current directory is NOT a Git repository."
+    echo "Please initialize the repository first (git init) and ensure you have linked a remote (git remote add origin ...)."
+    exit 1
+fi
+
+# --- 3. Stage Files ---
+echo "--- $(date '+%Y-%m-%d %H:%M:%S') ---"
+echo "Staging all changes in the SDKP repository..."
+git add .
+
+# Check if there are any changes to commit
+if git diff --cached --quiet --exit-code; then
+    echo "✅ Working tree clean. No new changes found to commit."
+    exit 0
+fi
+
+# --- 4. Get Commit Message ---
+read -r -p "Enter your commit message (e.g., 'Update SDKP equations' or 'DCP Protocol sync'): " COMMIT_MSG
+
+# Ensure the commit message is not empty
+if [ -z "$COMMIT_MSG" ]; then
+    COMMIT_MSG="Automated update from FatherTimeSDKP"
+fi
+
+# --- 5. Commit Changes ---
+echo "Committing changes with message: '$COMMIT_MSG'"
+if ! git commit -m "$COMMIT_MSG"; then
+    echo "❌ ERROR: Git commit failed. See output above."
+    exit 1
+fi
+
+# --- 6. Push to GitHub ---
+echo "Pushing changes to remote 'origin' on branch '$BRANCH_NAME'..."
+# The success of this command depends on SSH or PAT being configured:
+if git push origin "$BRANCH_NAME"; then
+    echo ""
+    echo "🚀 SUCCESS! SDKP repository updated on GitHub."
+    echo "Branch: $BRANCH_NAME"
+    echo "Commit: $COMMIT_MSG"
+else
+    echo "❌ ERROR: Git push failed. Please verify your authentication (SSH/PAT) and connectivity."
+    exit 1
+fi
