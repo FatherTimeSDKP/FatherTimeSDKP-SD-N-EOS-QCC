@@ -7,39 +7,22 @@ title: "TimeSeal Framework: SDKP, EOS, SD&N, QCC"
 version: 1.0.0
 doi: 10.5281/zenodo.15399806
 date-released: 2025-05-20
-  title={The Scale–Density–Kinematic Principle (SDKP): A Unified Law of Time, Motion, and Mass-Energy},
-  author={Smith, Donald Paul},
-  journal={FatherTimeSDKP Physics Archive},
-  year={2025},
-  url={https://fathertimesdkp.blockchain/sdkp-whitepaper.pdf}
-}Smith
-    cff-version: 1.2.0
-message: "If you use this software or framework, please cite it using the metadata below."
-authors:
-  - family-names: Smith
-    given-names: Donald Paul
-    orcid: https://orcid.org/0009-0003-7925-1653
-title: "FatherTimeSDKP Framework"
-version: 1.0.0
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.15745609
-date-released: 2025-01-18
-url: "https://github.com/FatherTimeSDKP/FatherTimeSDKP-"
-repository-code: "https://github.com/FatherTimeSDKP/FatherTimeSDKP-"
-license: "MIT"
-keywords:
-  - SDKP
-  - QCC
-  - SD&N
-  - EOS
-  - quantum entanglement
-  - matter–antimatter asymmetry
-  - theoretical physics
-abstract: >
-  The FatherTimeSDKP Framework, developed by Donald Paul Smith (aka FatherTime),
-  redefines core physics simulation by integrating Size–Density–Kinetics–Time (SDKP),
-  Quantum Computerization Consciousness (QCC), Shape–Dimension–Number (SD&N),
-  and Earth Orbital Speed (EOS) dynamics into a unified model. This framework is used
-  for entanglement prediction, gravitational resonance, dark matter behavior, and NP-complete 
-  collapse simulations. Released publicly under an open-source license for scientific advancement.
+references:
+  - type: dataset
+    title: "Zenodo Research Record 1"
+    url: "https://zenodo.org/records/19701580"
+    authors:
+      - family-names: Smith
+        given-names: Donald Paul
+  - type: dataset
+    title: "Zenodo Research Record 2"
+    url: "https://zenodo.org/records/19478891"
+    authors:
+      - family-names: Smith
+        given-names: Donald Paul
+  - type: dataset
+    title: "Zenodo Research Record 3"
+    url: "https://zenodo.org/records/18448356"
+    authors:
+      - family-names: Smith
+        given-names: Donald Paul
